@@ -4,9 +4,7 @@ public class PandoraClient {
 
    public PandoraClient() {
      try {
-        
        PandoraStress c = new StressImpl();
-       
        Naming.rebind("rmi://localhost:1098/StressService", c);
      } catch (Exception e) {
        System.out.println("Trouble: " + e);
@@ -14,6 +12,7 @@ public class PandoraClient {
    }
 
    public static void main(String args[]) {
-     new PandoraClient();
+       // Initialize and startup PandoraClient
+       new PandoraClient();
    }
 }
